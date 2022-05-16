@@ -1,25 +1,97 @@
 
-
-.wrapper {
-    width: 60%;
-    
-    background-color: blueviolet;
-    margin: 0 auto;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.imgArea img {
-    width: 30%;
-    height: 40%;
+.slider {
+    overflow: hidden;
+    
+}
 
+.center {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation {
+    display: flex;
+    position: absolute;
+    bottom: 20%;
+    margin-left: 60%;
+    transform: translateX(-100%);
+}
+
+.line {
+    height: 8px;
+    width: 30px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: blueviolet;
+    opacity: .5;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+
+.line:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
 }
 
 .imgArea {
-    display: flex;
-    justify-content: center;
-    padding-top: 1%;
+    transition: all .6s ease;
+    width: 25%;
 }
 
-.controls {
-    display: flex;
-    justify-content: space-around;
+.slides input {
+    display: none;
+}
+
+.imgArea img {
+    width: 60%;
+    height: 70%;
+}
+
+.someText {
+    padding-left: 2%;
+    background-color: #fff;
+}
+
+#cont1:checked ~ .sl1 {
+    margin-left: 0;
+   
+}
+#cont2:checked ~ .sl2 {
+    margin-left: -25%;
+}
+#cont3:checked ~ .sl3 {
+    margin-left: -50%;
+}
+#cont4:checked ~ .sl4 {
+    margin-left: -75%;
+}
+
+
+
+@media only screen and (max-width: 520px) {
+    .navigation {
+        width: 40%;
+        bottom: 15%;
+    }
+
+}
+@media only screen and (max-width: 375px) {
+   
+    .navigation {
+        width: 40%;
+        bottom: 15%;
+    }
 }
