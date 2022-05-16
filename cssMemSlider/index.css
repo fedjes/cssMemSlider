@@ -1,0 +1,25 @@
+
+
+.wrapper {
+    width: 60%;
+    
+    background-color: blueviolet;
+    margin: 0 auto;
+}
+
+.imgArea img {
+    width: 30%;
+    height: 40%;
+
+}
+
+.imgArea {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+}
